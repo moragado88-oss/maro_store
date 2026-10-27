@@ -3,42 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MARO STORE | مارو - جميع خدمات السوشيال ميديا</title>
+<title>MARO STORE - مارو</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800;900&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<style>
-body{font-family:'Cairo',sans-serif;background:#07070a;color:#fff;overflow-x:hidden}
-.silver-bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 15% 20%, #a855f722 0%, transparent 40%), radial-gradient(circle at 85% 80%, #d4af3722 0%, transparent 40%), #07070a}
-.glass{background:linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(20px)}
-.card{transition:0.35s}
-.card:hover{transform:translateY(-6px);border-color:#D4AF37;box-shadow:0 20px 50px rgba(212,175,55,0.15)}
-.tab-active{background:linear-gradient(90deg,#BF953F,#FCF6BA,#B38728)!important;color:#000!important}
-.gold-text{background:linear-gradient(90deg,#BF953F,#FCF6BA,#B38728);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.gold-btn{background:linear-gradient(90deg,#BF953F,#FCF6BA,#B38728);color:#000}
-.logo-spin{animation:spin 3s linear infinite}
-@keyframes spin{100%{transform:rotate(360deg)}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&display=swap" rel="stylesheet">
 </head>
-<body>
-<div class="silver-bg"></div>
-<nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center sticky top-0 z-50 bg-[#07070a]/70 backdrop-blur-xl border-b border-white/5">
-<div class="flex items-center gap-3">
-<div class="relative w-12 h-12">
-<div class="absolute inset-0 rounded-xl bg-gradient-to-br from-[#BF953F] via-[#FCF6BA] to-[#B38728] logo-spin"></div>
-<div class="absolute inset-[2px] rounded-[10px] bg-[#07070a] flex items-center justify-center"><span class="font-black text-xl gold-text" style="font-family:Outfit">M</span></div>
+<body style="font-family:Cairo;background:#07070a;color:white;padding:20px">
+
+<center>
+<h1 style="font-size:40px;font-weight:900">MARO <span style="color:#D4AF37">STORE</span></h1>
+<p style="color:#aaa">مارو || MARO - فودافون كاش 01030980823</p>
+<a href="https://wa.me/201030980823" style="background:gold;color:black;padding:10px 20px;border-radius:30px;display:inline-block;margin-top:10px;font-weight:900">واتساب: 01030980823</a>
+<br><br>
+<a href="https://www.tiktok.com/@marwan_gad7" style="color:#aaa">TikTok: @marwan_gad7</a> | 
+<a href="https://www.facebook.com/share/1EFFMRgqKE/" style="color:#aaa">Facebook</a>
+</center>
+
+<!-- مجاني -->
+<div style="background:#0f0f12;border:2px solid gold;border-radius:20px;padding:20px;margin-top:30px;text-align:center">
+<h2>🎁 50 لايك تيك توك مجانا كل 24 ساعة</h2>
+<input id="link" placeholder="حط لينك التيك توك هنا" style="width:70%;padding:12px;border-radius:30px;background:#07070a;border:1px solid #333;color:white;margin-top:10px">
+<button onclick="free()" style="background:gold;color:black;padding:12px 20px;border-radius:30px;font-weight:900">خد المجاني</button>
+<p id="msg" style="font-size:12px;color:#aaa;margin-top:10px"></p>
 </div>
-<div><div class="font-black text-[22px] leading-none tracking-tighter" style="font-family:Outfit">MARO <span class="gold-text">STORE</span></div><div class="text-[10px] tracking-[0.4em] text-zinc-400 font-bold">مارو || MARO</div></div>
+
+<h2 style="margin-top:40px;color:gold">🔥 خدمات تيك توك</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px"><b>1000 متابع مصري</b><br><span style="color:gold;font-size:22px;font-weight:900">260ج</span><br><a href="https://wa.me/201030980823?text=عايز 1000 متابع مصري 260ج" style="background:white;color:black;padding:5px 15px;border-radius:20px;display:inline-block;margin-top:5px">اطلب</a></div>
+
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px"><b>1000 لايك مصري حقيقي</b><br><span style="color:white;font-size:22px">45ج</span><br><a href="https://wa.me/201030980823?text=عايز 1000 لايك مصري 45ج" style="background:#222;color:white;padding:5px 15px;border-radius:20px;display:inline-block;margin-top:5px">اطلب</a></div>
+
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px"><b>1000 لايك اجانب فيك</b><br><span style="font-size:22px">20ج</span><br><a href="https://wa.me/201030980823?text=عايز 1000 لايك اجانب 20ج" style="background:#222;color:white;padding:5px 15px;border-radius:20px;display:inline-block;margin-top:5px">اطلب</a></div>
+
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px"><b>100 تعليق</b><br><span style="font-size:22px">35ج</span><br><a href="https://wa.me/201030980823?text=عايز 100 تعليق 35ج" style="background:#222;color:white;padding:5px 15px;border-radius:20px;display:inline-block;margin-top:5px">اطلب</a></div>
+
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px"><b>1000 سيف Save</b><br><span style="color:gold;font-size:22px">5ج</span><br><a href="https://wa.me/201030980823?text=عايز 1000 سيف 5ج" style="background:#222;color:white;padding:5px 15px;border-radius:20px;display:inline-block;margin-top:5px">اطلب</a></div>
+
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px"><b>1000 شير</b><br><span style="color:gold;font-size:22px">5ج</span><br><a href="https://wa.me/201030980823?text=عايز 1000 شير 5ج" style="background:#222;color:white;padding:5px 15px;border-radius:20px;display:inline-block;margin-top:5px">اطلب</a></div>
+
 </div>
-<div class="flex items-center gap-2">
-<a href="https://www.facebook.com/share/1EFFMRgqKE/" target="_blank" class="w-9 h-9 rounded-full glass flex items-center justify-center"><i class="fab fa-facebook-f text-sm"></i></a>
-<a href="https://www.tiktok.com/@marwan_gad7?_r=1&_t=ZS-9AtM7Vu2Tsm" target="_blank" class="w-9 h-9 rounded-full glass flex items-center justify-center"><i class="fab fa-tiktok text-sm"></i></a>
-<a href="https://wa.me/201030980823" class="gold-btn px-5 py-2.5 rounded-full text-sm font-black">01030980823</a>
+
+<h2 style="margin-top:30px;color:gold">🔴 خدمات اللايف</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+<div style="background:#0f0f12;border:1px solid gold;padding:15px;border-radius:15px"><b>1000 تكبيس لايف</b><br><span style="color:gold;font-size:24px;font-weight:900">2ج - ارخص سعر</span><br><a href="https://wa.me/201030980823?text=عايز 1000 تكبيس لايف 2ج" style="background:gold;color:black;padding:5px 15px;border-radius:20px;display:inline-block;margin-top:5px;font-weight:900">اطلب</a></div>
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px"><b>100 مشاهد لايف</b><br><span style="font-size:22px">50ج</span><br><a href="https://wa.me/201030980823?text=عايز 100 مشاهد لايف 50ج" style="background:#222;color:white;padding:5px 15px;border-radius:20px;display:inline-block;margin-top:5px">اطلب</a></div>
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px"><b>متابعين عبر اللايف</b><br><a href="https://wa.me/201030980823?text=عايز متابعين عبر اللايفات" style="background:#222;color:white;padding:5px 15px;border-radius:20px;display:inline-block;margin-top:5px">اسأل</a></div>
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px"><b>نقاط جوالات لايف</b><br><a href="https://wa.me/201030980823?text=عايز نقاط جوالات لايفات" style="background:#222;color:white;padding:5px 15px;border-radius:20px;display:inline-block;margin-top:5px">اسأل</a></div>
 </div>
-</nav>
-<section class="max-w-7xl mx-auto px-6 pt-10">
-<div class="grid md:grid-cols-2 gap-8 items-center">
-<div>
-<div class="inline-flex glass px-3 py-1 rounded-full text-[11px] gap-2"><span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span> فودافون كاش: 01030980823 - شغال 24 ساعة</div>
-<h1 class="text-5xl md:text-[62px] font-black leading-[0.9] mt-6" style="font-family:Outfit">WE MAKE YOU<br><span class="gold-text">VIRAL.</span></h1>
-<p class="text-zinc-400 mt-4 max-w-md text-sm">MARO STORE - ارخص مزود خدمات تيك توك وانستا وفيسبوك ولايفات في مصر - تنفيذ فوري وضمان.</p
+
+<h2 style="margin-top:30px;color:gold">📸 انستقرام</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-top:10px">
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px;text-align:center"><b>1000 متابع اجانب</b><br><span style="color:gold;font-size:20px">85ج</span><br><a href="https://wa.me/201030980823?text=عايز 1000 متابع انستا 85ج" style="background:gold;color:black;padding:5px 10px;border-radius:20px;display:inline-block;margin-top:5px">اطلب</a></div>
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px;text-align:center"><b>1000 لايك</b><br><span style="color:gold;font-size:20px">35ج</span><br><a href="https://wa.me/201030980823?text=عايز 1000 لايك انستا 35ج" style="background:gold;color:black;padding:5px 10px;border-radius:20px;display:inline-block;margin-top:5px">اطلب</a></div>
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px;text-align:center"><b>1000 ريبوست</b><br><span style="color:gold;font-size:20px">55ج</span><br><a href="https://wa.me/201030980823?text=عايز 1000 ريبوست انستا 55ج" style="background:gold;color:black;padding:5px 10px;border-radius:20px;display:inline-block;margin-top:5px">اطلب</a></div>
+</div>
+
+<h2 style="margin-top:30px;color:gold">📘 فيسبوك</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px">
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px"><b>1000 متابع اجانب</b><br><span style="color:gold;font-size:22px">75ج</span><br><a href="https://wa.me/201030980823?text=عايز 1000 متابع فيسبوك 75ج" style="background:gold;color:black;padding:5px 15px;border-radius:20px;display:inline-block;margin-top:5px">اطلب</a></div>
+<div style="background:#0f0f12;border:1px solid #222;padding:15px;border-radius:15px"><b>1000 رياكت كل الانواع</b><br><span style="color:gold;font-size:22px">35ج</span><br><a href="https://wa.me/201030980823?text=عايز 1000 رياكت فيسبوك 35ج" style="background:gold;color:black;padding:5px 15px;border-radius:20px;display:inline-block;margin-top:5px">اطلب</a></div>
+</div>
+
+<center style="margin-top:40px;padding:20px;border-top:1px solid #222">
+<p>MARO STORE - 01030980823</p>
+<p style="font-size:12px;color:#666">TikTok @marwan_gad7 | Facebook MARO STORE</p>
+</center>
+
+<script>
+function free(){
+let l=document.getElementById('link').value;
+let m=document.getElementById('msg');
+if(!l){alert('حط اللينك');return;}
+if(!l.includes('tiktok.com')){alert('لينك تيك توك فقط');return;}
+let last=localStorage.getItem('maro_free');
+let now=Date.now();
+if(last && now-last < 86400000){
+let diff=86400000-(now-last);
+let h=Math.floor(diff/3600000);
+let mm=Math.floor((diff%3600000)/60000);
+m.innerHTML='⏳ خدت هديتك - باقي '+h+' ساعة و '+mm+' دقيقة';
+return;
+}
+localStorage.setItem('maro_free',now);
+m.innerHTML='✅ تم - 50 لايك في الطريق';
+window.open('https://wa.me/201030980823?text=طلب مجاني 50 لايك MARO%0A'+encodeURIComponent(l),'_blank');
+}
+let last=localStorage.getItem('maro_free');
+if(last){
+let now=Date.now();
+let diff=86400000-(now-last);
+if(diff>0){
+let h=Math.floor(diff/3600000);
+let mm=Math.floor((diff%3600000)/60000);
+document.getElementById('msg').innerHTML='⏳ الهدية الجاية بعد: '+h+'h '+mm+'m';
+}
+}
+</script>
+</body>
+</html>
