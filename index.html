@@ -3,79 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MARO STORE | البراند الأصلي</title>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;900&family=Anton&display=swap" rel="stylesheet">
+<title>MARO STORE | مارو - جميع خدمات السوشيال ميديا</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;800;900&family=Outfit:wght@800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Cairo',sans-serif;background:#050505;color:#fff}
-header{padding:16px;text-align:center;background:#000;border-bottom:1px solid #1a1a1a;position:sticky;top:0;z-index:99}
-.logo{font-family:'Anton',sans-serif;font-size:36px;letter-spacing:3px}
-.top-notice{background:#fff;color:#000;text-align:center;padding:7px;font-weight:900;font-size:11px}
-.hero{padding:50px 20px;text-align:center;background:radial-gradient(circle at 50% 0%,#222 0%,#000 75%)}
-.hero .owner{width:90px;height:90px;border-radius:50%;border:3px solid #fff;margin:0 auto 15px;background:#111;display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:900}
-.hero h1{font-size:46px;font-weight:900}
-.hero p{color:#888;margin-top:6px}
-.socials{display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap}
-.socials a{background:#fff;color:#000;padding:10px 20px;border-radius:30px;text-decoration:none;font-weight:900;font-size:13px;display:flex;align-items:center;gap:6px}
-.socials a.fb{background:#1877F2;color:#fff}
-.socials a.tk{background:#000;color:#fff;border:1px solid #333}
-.section{max-width:1000px;margin:auto;padding:0 12px}
-.sec-title{font-size:16px;font-weight:900;margin:32px 0 14px;display:flex;align-items:center;gap:10px}
-.sec-title:before{content:'';width:28px;height:2px;background:#fff;display:block}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.card{background:#101010;border:1px solid #1e1e1e;border-radius:18px;padding:16px;position:relative}
-.card:hover{border-color:#fff;transform:translateY(-2px);transition:.2s}
-.badge{position:absolute;top:10px;left:10px;background:#fff;color:#000;font-size:8px;font-weight:900;padding:3px 8px;border-radius:20px}
-.card h3{font-size:12.5px;margin-top:26px;min-height:34px}
-.price{font-size:24px;font-weight:900;margin:4px 0}
-.price small{font-size:11px;color:#666}
-.meta{font-size:10px;color:#555;margin-bottom:10px}
-.btn{display:block;background:#fff;color:#000;text-align:center;padding:10px;border-radius:30px;text-decoration:none;font-weight:900;font-size:12px}
-.pay{margin:30px auto 0;padding:18px;background:#0f0f0f;border:1px dashed #222;border-radius:16px;display:flex;justify-content:space-between;align-items:center}
-footer{text-align:center;padding:40px 20px 110px;color:#333;font-size:11px}
-.btn-w{position:fixed;bottom:14px;left:12px;right:12px;background:#25D366;color:#fff;text-align:center;padding:14px;border-radius:40px;text-decoration:none;font-weight:900;font-size:14px;z-index:100}
+body{font-family:'Cairo',sans-serif;background:#07070a;color:#fff;overflow-x:hidden}
+.silver-bg{position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 15% 20%, #a855f722 0%, transparent 40%), radial-gradient(circle at 85% 80%, #d4af3722 0%, transparent 40%), #07070a}
+.glass{background:linear-gradient(180deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.08);backdrop-filter:blur(20px)}
+.card{transition:0.35s}
+.card:hover{transform:translateY(-6px);border-color:#D4AF37;box-shadow:0 20px 50px rgba(212,175,55,0.15)}
+.tab-active{background:linear-gradient(90deg,#BF953F,#FCF6BA,#B38728)!important;color:#000!important}
+.gold-text{background:linear-gradient(90deg,#BF953F,#FCF6BA,#B38728);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.gold-btn{background:linear-gradient(90deg,#BF953F,#FCF6BA,#B38728);color:#000}
+.logo-spin{animation:spin 3s linear infinite}
+@keyframes spin{100%{transform:rotate(360deg)}}
 </style>
 </head>
 <body>
-<div class="top-notice">MARO STORE • ALEXANDRIA • TRUSTED BRAND</div>
-<header><div class="logo">MARO STORE</div></header>
-<div class="hero">
-<div class="owner">M</div>
-<h1>MARO STORE</h1>
-<p>أرخص أسعار في مصر - ضمان وثقة - 01030980823</p>
-<div class="socials">
-<a class="tk" href="https://www.tiktok.com/@marwan_gad7?_r=1&_t=ZS-9AtGt3i4qoc" target="_blank">TikTok @marwan_gad7</a>
-<a class="fb" href="https://www.facebook.com/share/1DTF1UqwEx/" target="_blank">Facebook</a>
+<div class="silver-bg"></div>
+<nav class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center sticky top-0 z-50 bg-[#07070a]/70 backdrop-blur-xl border-b border-white/5">
+<div class="flex items-center gap-3">
+<div class="relative w-12 h-12">
+<div class="absolute inset-0 rounded-xl bg-gradient-to-br from-[#BF953F] via-[#FCF6BA] to-[#B38728] logo-spin"></div>
+<div class="absolute inset-[2px] rounded-[10px] bg-[#07070a] flex items-center justify-center"><span class="font-black text-xl gold-text" style="font-family:Outfit">M</span></div>
 </div>
+<div><div class="font-black text-[22px] leading-none tracking-tighter" style="font-family:Outfit">MARO <span class="gold-text">STORE</span></div><div class="text-[10px] tracking-[0.4em] text-zinc-400 font-bold">مارو || MARO</div></div>
 </div>
-<div class="section">
-<div class="sec-title">TIKTOK - تيك توك</div>
-<div class="grid">
-<div class="card"><div class="badge">NEW</div><h3>100 تعليق مصري حقيقي 🇪🇬</h3><div class="price">45 <small>EGP</small></div><div class="meta">تعليقات مصريين - تفاعل قوي</div><a class="btn" href="https://wa.me/201030980823?text=عايز 100 تعليق مصري ب45ج">اطلب الآن</a></div>
-<div class="card"><div class="badge">مصري</div><h3>1000 متابع تيك توك مصري</h3><div class="price">260 <small>EGP</small></div><div class="meta">ضمان + فوري</div><a class="btn" href="https://wa.me/201030980823?text=عايز 1000 متابع مصري 260ج">اطلب الآن</a></div>
-<div class="card"><div class="badge">أجنبي</div><h3>1000 متابع تيك توك أجنبي</h3><div class="price">115 <small>EGP</small></div><div class="meta">رخيص وسريع</div><a class="btn" href="https://wa.me/201030980823?text=عايز 1000 متابع اجنبي 115ج">اطلب الآن</a></div>
-<div class="card"><div class="badge">حقيقي</div><h3>1000 لايك حقيقي</h3><div class="price">45 <small>EGP</small></div><div class="meta">تفاعل عالي</div><a class="btn" href="https://wa.me/201030980823?text=عايز 1000 لايك حقيقي 45ج">اطلب الآن</a></div>
-<div class="card"><div class="badge">فيك</div><h3>1000 لايك فيك</h3><div class="price">20 <small>EGP</small></div><div class="meta">أرخص سعر</div><a class="btn" href="https://wa.me/201030980823?text=عايز 1000 لايك فيك 20ج">اطلب الآن</a></div>
-<div class="card"><div class="badge">مشاهدات</div><h3>1000 مشاهدة حقيقية</h3><div class="price">10 <small>EGP</small></div><div class="meta">رفع ريتش</div><a class="btn" href="https://wa.me/201030980823?text=عايز 1000 مشاهدة 10ج">اطلب الآن</a></div>
-<div class="card"><div class="badge">سيف</div><h3>1000 حفظ</h3><div class="price">5 <small>EGP</small></div><div class="meta">Save</div><a class="btn" href="https://wa.me/201030980823?text=عايز 1000 حفظ 5ج">اطلب الآن</a></div>
-<div class="card"><div class="badge">شير</div><h3>1000 شير</h3><div class="price">10 <small>EGP</small></div><div class="meta">Share</div><a class="btn" href="https://wa.me/201030980823?text=عايز 1000 شير 10ج">اطلب الآن</a></div>
+<div class="flex items-center gap-2">
+<a href="https://www.facebook.com/share/1EFFMRgqKE/" target="_blank" class="w-9 h-9 rounded-full glass flex items-center justify-center"><i class="fab fa-facebook-f text-sm"></i></a>
+<a href="https://www.tiktok.com/@marwan_gad7?_r=1&_t=ZS-9AtM7Vu2Tsm" target="_blank" class="w-9 h-9 rounded-full glass flex items-center justify-center"><i class="fab fa-tiktok text-sm"></i></a>
+<a href="https://wa.me/201030980823" class="gold-btn px-5 py-2.5 rounded-full text-sm font-black">01030980823</a>
 </div>
-<div class="sec-title">INSTAGRAM - انستجرام</div>
-<div class="grid">
-<div class="card"><div class="badge">INSTA</div><h3>1000 متابع انستا</h3><div class="price">85 <small>EGP</small></div><div class="meta">ثابت</div><a class="btn" href="https://wa.me/201030980823">اطلب الآن</a></div>
-<div class="card"><div class="badge">INSTA</div><h3>1000 لايك انستا</h3><div class="price">35 <small>EGP</small></div><div class="meta">تفاعل</div><a class="btn" href="https://wa.me/201030980823">اطلب الآن</a></div>
-<div class="card"><div class="badge">INSTA</div><h3>1000 ريبوست انستا</h3><div class="price">55 <small>EGP</small></div><div class="meta">إعادة نشر</div><a class="btn" href="https://wa.me/201030980823">اطلب الآن</a></div>
-<div class="card"><div class="badge">INSTA</div><h3>1000 مشاهدة انستا</h3><div class="price">10 <small>EGP</small></div><div class="meta">ريلز</div><a class="btn" href="https://wa.me/201030980823">اطلب الآن</a></div>
-</div>
-<div class="sec-title">FACEBOOK - فيسبوك</div>
-<div class="grid">
-<div class="card"><div class="badge">FB</div><h3>1000 متابع فيس أجانب</h3><div class="price">70 <small>EGP</small></div><div class="meta">تزويد صفحة</div><a class="btn" href="https://wa.me/201030980823">اطلب الآن</a></div>
-<div class="card"><div class="badge">FB</div><h3>1000 ريتش فيس</h3><div class="price">35 <small>EGP</small></div><div class="meta">وصول</div><a class="btn" href="https://wa.me/201030980823">اطلب الآن</a></div>
-<div class="card"><div class="badge">FB</div><h3>1000 لايك فيس</h3><div class="price">45 <small>EGP</small></div><div class="meta">تفاعل</div><a class="btn" href="https://wa.me/201030980823">اطلب الآن</a></div>
-</div>
-<div class="pay"><b>الدفع: فودافون كاش / انستا باي</b><span>01030980823</span></div>
-</div>
-<footer>MARO STORE - THE ORIGINAL BRAND<br>Alexandria, Egypt<br><br><a href="https://www.tiktok.com/@marwan_gad7?_r=1&_t=ZS-9AtGt3i4qoc" style="color:#555">TikTok</a> • <a href="https://www.facebook.com/share/1DTF1UqwEx/" style="color:#555">Facebook</a></footer>
-<a class="btn-w" href="https://wa.me/201030980823?text=مرحبا MARO STORE عايز اطلب">واتساب: 01030980823 - اطلب الآن</a>
-</body>
-</html>
+</nav>
+<section class="max-w-7xl mx-auto px-6 pt-10">
+<div class="grid md:grid-cols-2 gap-8 items-center">
+<div>
+<div class="inline-flex glass px-3 py-1 rounded-full text-[11px] gap-2"><span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span> فودافون كاش: 01030980823 - شغال 24 ساعة</div>
+<h1 class="text-5xl md:text-[62px] font-black leading-[0.9] mt-6" style="font-family:Outfit">WE MAKE YOU<br><span class="gold-text">VIRAL.</span></h1>
+<p class="text-zinc-400 mt-4 max-w-md text-sm">MARO STORE - ارخص مزود خدمات تيك توك وانستا وفيسبوك ولايفات في مصر - تنفيذ فوري وضمان.</p
