@@ -1,448 +1,161 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#080914">
-<meta name="description" content="MARO - خدمات السوشيال ميديا وشحن الألعاب وتصميم المواقع والمنصات التعليمية.">
-<title>MARO | عالم الخدمات الرقمية</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<meta name="theme-color" content="#0e0e15">
+<title>MARO STORE 👑 - لوحة الطلبات</title>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root{
-  --bg:#080914;--card:#121426;--purple:#9b5cff;
-  --blue:#38bdf8;--text:#f8f9ff;--muted:#a4a8c0;
-  --border:rgba(255,255,255,.09);
-}
+:root{--bg:#0b0b11;--card:#181820;--card2:#1f1f2a;--ink:#f1f1f6;--muted:#8b8a9e;--stroke:#2a2a38;--pink:#ff2e6d;--pink2:#ff4c8a;--cyan:#53f4e5}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:85px}
-body{
-  background:radial-gradient(ellipse at 15% 10%,#39216b30,transparent 35%),
-  radial-gradient(ellipse at 90% 65%,#005c8a20,transparent 35%),var(--bg);
-  color:var(--text);font-family:'Cairo',sans-serif;overflow-x:hidden
-}
-a{text-decoration:none;color:inherit}
-button{font-family:inherit;cursor:pointer}
-.container{width:min(1120px,92%);margin:auto}
-header{
-  position:sticky;top:0;z-index:100;
-  background:#080914eF;backdrop-filter:blur(16px);
-  border-bottom:1px solid var(--border)
-}
-nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:15px}
-.logo{
-  font-size:29px;font-weight:900;letter-spacing:2px;
-  background:linear-gradient(90deg,#fff,#ae78ff,#43d5ff);
-  -webkit-background-clip:text;background-clip:text;color:transparent
-}
-.navlinks{display:flex;gap:19px;align-items:center}
-.navlinks a{font-size:12px;color:#d4d6e9;transition:.25s}
-.navlinks a:hover{color:var(--blue)}
-.btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:8px;
-  padding:12px 19px;border-radius:12px;font-size:13px;font-weight:800;
-  border:1px solid transparent;transition:.25s
-}
-.btn:hover{transform:translateY(-3px);box-shadow:0 8px 25px #9b5cff30}
-.primary{background:linear-gradient(100deg,#8747ff,#4d8dff);color:white}
-.outline{border-color:var(--border);background:#ffffff08;color:white}
-.menu{display:none;background:var(--card);color:white;border:1px solid var(--border);border-radius:10px;padding:8px 12px;font-size:20px}
-.hero{padding:70px 0 65px}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
-.tag{display:inline-block;border:1px solid #9b5cff66;color:#c5a4ff;background:#9b5cff12;border-radius:30px;padding:7px 14px;font-size:12px;margin-bottom:19px}
-h1{font-size:clamp(39px,6vw,67px);line-height:1.35;font-weight:900}
-.gradient{background:linear-gradient(100deg,#ad78ff,#49d4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{color:var(--muted);line-height:2.1;margin:20px 0 26px;font-size:14px}
-.hero-buttons{display:flex;gap:12px;flex-wrap:wrap}
-.stats{display:flex;gap:27px;margin-top:32px;flex-wrap:wrap}
-.stat strong{display:block;font-size:21px;color:#c7a3ff}
-.stat span{font-size:11px;color:var(--muted)}
-.profile-wrap{display:flex;justify-content:center;position:relative}
-.profile-ring{
-  width:min(335px,78vw);aspect-ratio:1;border-radius:50%;padding:5px;
-  background:conic-gradient(#9b5cff,#39d9ff,#9b5cff);
-  animation:glow 4s ease-in-out infinite
-}
-.profile{width:100%;height:100%;border-radius:50%;object-fit:cover;object-position:center;border:5px solid var(--bg)}
-.float-card{
-  position:absolute;bottom:8%;right:-2%;background:#17182c;
-  border:1px solid var(--border);padding:12px 16px;border-radius:14px;
-  font-size:12px;animation:float 3s ease-in-out infinite
-}
-@keyframes float{50%{transform:translateY(-10px)}}
-@keyframes glow{50%{box-shadow:0 0 45px #8b5cff55}}
-section{padding:65px 0}
-.section-head{text-align:center;margin-bottom:34px}
-.section-head h2{font-size:clamp(26px,4vw,38px);font-weight:900}
-.section-head p{color:var(--muted);font-size:13px;line-height:2;margin-top:8px}
-.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.card{
-  background:linear-gradient(145deg,#15172b,#0e1020);
-  border:1px solid var(--border);border-radius:20px;
-  padding:22px;transition:.3s;overflow:hidden
-}
-.card:hover{transform:translateY(-6px);border-color:#9b5cff88;box-shadow:0 15px 35px #0004}
-.card-icon{width:49px;height:49px;border-radius:15px;display:grid;place-items:center;font-size:26px;background:#9b5cff19;margin-bottom:14px}
-.card h3{font-size:18px;margin-bottom:8px}
-.card>p{font-size:12px;color:var(--muted);line-height:1.9;margin-bottom:16px}
-.price-list{border-top:1px solid var(--border);padding-top:9px}
-.price-row{display:flex;justify-content:space-between;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid #ffffff09;font-size:12px}
-.price-row:last-child{border-bottom:0}
-.price-row span:first-child{color:#dedff0}
-.price{color:#9ee8ff;font-weight:800;white-space:nowrap}
-.order{
-  display:flex;width:100%;margin-top:16px;padding:11px;border-radius:11px;
-  background:#9b5cff15;border:1px solid #9b5cff45;
-  color:#d5baff;font-size:12px;font-weight:800;justify-content:center;
-  transition:.2s
-}
-.order:hover{background:#8747ff;color:white}
-.notice{margin-top:20px;padding:16px 19px;border:1px solid #38bdf833;background:#38bdf80a;border-radius:13px;color:#c5c9df;font-size:12px;line-height:2}
-.games{background:#10112445}
-.game-price{color:#8de7ff;font-weight:800;font-size:13px;margin:13px 0}
-.contact-box{
-  text-align:center;padding:40px 22px;border-radius:24px;
-  border:1px solid #9b5cff44;
-  background:radial-gradient(ellipse at top,#6639a52a,transparent 70%),#111224
-}
-.contact-box h2{font-size:clamp(26px,4vw,38px)}
-.contact-box p{color:var(--muted);margin:13px 0 23px;line-height:2;font-size:13px}
-.socials{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
-footer{border-top:1px solid var(--border);padding:24px 0;text-align:center;color:var(--muted);font-size:12px}
-footer b{color:#c5a4ff}
-.floating-wa{
-  position:fixed;bottom:19px;left:18px;z-index:90;
-  width:55px;height:55px;border-radius:50%;display:grid;place-items:center;
-  background:#20c968;color:white;font-size:26px;
-  box-shadow:0 5px 25px #20c96844;transition:.25s
-}
-.floating-wa:hover{transform:scale(1.1)}
-.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
-.reveal.visible{opacity:1;transform:translateY(0)}
-@media(max-width:850px){
- .navlinks{display:none;position:absolute;top:72px;right:0;left:0;background:#101122;padding:20px;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--border)}
- .navlinks.open{display:flex}.menu{display:block}nav>.btn{display:none}
- .hero-grid{grid-template-columns:1fr;text-align:center;gap:38px}
- .profile-wrap{grid-row:1}.profile-ring{width:245px}
- .hero-buttons,.stats{justify-content:center}.hero p{max-width:600px;margin-right:auto;margin-left:auto}
- .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media(max-width:520px){
- .grid{grid-template-columns:1fr}
- section{padding:48px 0}
- .hero{padding-top:40px}
- .card{padding:20px}
- .stats{gap:19px}
-}
-@media(prefers-reduced-motion:reduce){
- *,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}
- .reveal{opacity:1;transform:none}
-}
+body{font-family:Cairo,sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden}
+a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer;border:0}
+.container{width:min(560px,94%);margin:auto}
+.aurora{position:fixed;inset:-30%;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 15% 20%,#6b28ca2a,transparent 40%),radial-gradient(ellipse at 85% 15%,#ff4fc822,transparent 35%),radial-gradient(ellipse at 50% 85%,#53f4e51a,transparent 40%);filter:blur(35px);animation:aurora 20s ease-in-out infinite alternate}
+#stars{position:fixed;inset:0;z-index:-3;opacity:.4}
+.topbar{position:sticky;top:0;z-index:50;background:#0e0e15f2;backdrop-filter:blur(18px);padding:10px 0 8px;border-bottom:1px solid #ffffff0a}
+.search-wrap{position:relative;background:var(--card);border:1px solid var(--stroke);border-radius:14px;height:44px;display:flex;align-items:center;padding:0 14px;gap:10px}
+.search-wrap input{flex:1;background:transparent;border:0;outline:0;color:#fff;font-size:.95rem}
+.search-icon{color:var(--muted)}
+.tabs-wrap{overflow-x:auto;display:flex;gap:8px;padding:12px 0 2px}.tabs-wrap::-webkit-scrollbar{display:none}
+.chip{white-space:nowrap;padding:8px 16px;border-radius:99px;background:var(--card);border:1px solid var(--stroke);color:#c2c0d6;font-weight:800;font-size:.86rem;display:inline-flex;align-items:center;gap:6px;flex-shrink:0}
+.chip.active{background:var(--pink);border-color:var(--pink);color:#fff;box-shadow:0 6px 22px #ff2e6d40}
+.main-card{margin:14px auto;background:var(--card);border:1px solid var(--stroke);border-radius:20px;padding:16px}
+.label{font-size:.82rem;color:var(--muted);font-weight:700;margin:14px 2px 6px;display:flex;justify-content:flex-start}
+.label:first-child{margin-top:2px}
+.select{position:relative;background:var(--card2);border:1px solid var(--stroke);border-radius:14px;height:48px;display:flex;align-items:center;justify-content:space-between;padding:0 14px;cursor:pointer}
+.select .arrow{color:var(--muted)}.select.open .arrow{transform:rotate(180deg)}
+.select-text{font-weight:800;font-size:.9rem}
+.badge-mini{background:#2a2a38;color:#9d9bb8;padding:2px 8px;border-radius:8px;font-size:.75rem;font-weight:800}
+.dropdown{position:absolute;top:52px;right:0;left:0;z-index:20;background:#23232f;border:1px solid #3a3a4d;border-radius:14px;max-height:260px;overflow:auto;display:none;box-shadow:0 18px 50px #0008}
+.dropdown.show{display:block}
+.dropdown .opt{padding:12px 14px;font-size:.88rem;font-weight:700;border-bottom:1px solid #2a2a38;cursor:pointer;display:flex;justify-content:space-between}
+.dropdown .opt:hover{background:#2d2d3c}.dropdown .opt.active{color:var(--pink)}
+.input-wrap{position:relative;background:var(--card2);border:1px solid var(--stroke);border-radius:14px;height:48px;display:flex;align-items:center;padding:0 8px 0 14px;gap:8px}
+.input-wrap input{flex:1;background:transparent;border:0;outline:0;color:#fff;font-size:.92rem}
+.icon-btn{width:32px;height:32px;border-radius:9px;background:#2a2a38;border:1px solid #3a3a4a;display:grid;place-items:center;color:#9d9bb8}
+.hint{font-size:.73rem;color:var(--muted);margin:6px 2px 0;text-align:left}
+.time-box{background:var(--card2);border:1px solid var(--stroke);border-radius:14px;height:48px;display:flex;align-items:center;padding:0 14px;font-weight:800}
+.cost-box{background:var(--card2);border:1px solid var(--stroke);border-radius:14px;min-height:48px;display:flex;align-items:center;padding:0 14px;font-weight:900;font-size:1.15rem;color:var(--cyan)}
+.btn-send{width:100%;margin-top:16px;height:52px;border-radius:14px;background:linear-gradient(110deg,var(--pink),var(--pink2));color:#fff;font-weight:900;font-size:1rem;box-shadow:0 10px 30px #ff2e6d35}
+.perf{margin-top:14px;background:#13131b;border:1px solid #ffffff0f;border-radius:16px;padding:14px}
+.perf-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.status-pill{padding:4px 12px;border-radius:99px;background:#d9ffea;color:#0b7a3a;font-size:.75rem;font-weight:900;display:flex;align-items:center;gap:6px}
+.status-dot{width:7px;height:7px;border-radius:50%;background:#00c25a}
+.perf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center}
+.perf-grid small{color:var(--muted);font-size:.72rem}.perf-grid strong{font-size:.85rem;display:block;margin-top:2px}.perf-grid strong.pink{color:var(--pink)}
+.perf-note{margin-top:10px;font-size:.72rem;color:var(--muted);text-align:center}
+.details-toggle{margin:16px auto 0;background:var(--card);border:1px solid var(--stroke);border-radius:14px;height:46px;display:flex;align-items:center;justify-content:center;gap:8px;color:#c2c0d6;font-weight:800;width:100%}
+.fab{position:fixed;bottom:78px;right:16px;width:56px;height:56px;border-radius:50%;background:var(--pink);display:grid;place-items:center;color:#fff;font-size:1.5rem;box-shadow:0 10px 30px #ff2e6d55;z-index:40}
+.bottom-nav{position:fixed;bottom:0;left:0;right:0;z-index:50;background:#0e0e15f5;backdrop-filter:blur(20px);border-top:1px solid #ffffff0f;display:grid;grid-template-columns:repeat(4,1fr);padding:6px 0 8px}
+.nav-item{display:flex;flex-direction:column;align-items:center;gap:2px;color:var(--muted);font-size:.68rem;font-weight:700;padding:4px}
+.nav-item.active{color:var(--pink)}.nav-item i{font-size:1.25rem;font-style:normal}
+.logo-bar{padding:10px 0 4px;text-align:center}.logo-bar b{font-size:1.35rem;font-weight:900}.logo-bar b span{color:var(--pink)}.logo-bar p{font-size:.72rem;color:var(--muted);margin-top:2px}
+@keyframes aurora{to{transform:translate(4%,-3%) scale(1.06)}}.wa{position:fixed;bottom:16px;right:16px;z-index:99;display:flex;gap:8px;align-items:center;padding:12px 18px;border-radius:99px;background:#0e9f58;color:#fff;font-weight:900}
 </style>
 </head>
-
 <body>
-<header>
-  <div class="container">
-    <nav>
-      <a class="logo" href="#home">MARO<span style="color:#38bdf8">.</span></a>
-      <div class="navlinks" id="navlinks">
-        <a href="#home">الرئيسية</a>
-        <a href="#social">السوشيال ميديا</a>
-        <a href="#games">شحن الألعاب</a>
-        <a href="#websites">تصميم المواقع</a>
-        <a href="#contact">تواصل معنا</a>
-      </div>
-      <a class="btn primary" href="https://wa.me/201030980823">اطلب خدمتك ↗</a>
-      <button class="menu" id="menu" aria-label="القائمة">☰</button>
-    </nav>
-  </div>
-</header>
-
-<main>
-<section class="hero" id="home">
-  <div class="container hero-grid">
-    <div class="reveal">
-      <span class="tag">✦ أهلاً بك في عالم MARO الرقمي</span>
-      <h1>كبّر حضورك<br>مع <span class="gradient">MARO</span></h1>
-      <p>خدمات السوشيال ميديا وشحن الألعاب وتصميم المواقع والمنصات التعليمية في مكان واحد، بتصميم عصري وأسعار واضحة.</p>
-      <div class="hero-buttons">
-        <a class="btn primary" href="#social">🚀 اكتشف الخدمات</a>
-        <a class="btn outline" href="#contact">تواصل مع مارو ↗</a>
-      </div>
-      <div class="stats">
-        <div class="stat"><strong>5+</strong><span>منصات وخدمات</span></div>
-        <div class="stat"><strong>24/7</strong><span>استقبال الطلبات</span></div>
-        <div class="stat"><strong>MARO</strong><span>عالمك الرقمي</span></div>
-      </div>
-    </div>
-    <div class="profile-wrap reveal">
-      <div class="profile-ring">
-        <img class="profile" src="maro.jpg" alt="صورة مارو" onerror="this.onerror=null;this.src='https://placehold.co/500x500/121426/bd91ff?text=MARO'">
-      </div>
-      <div class="float-card">✨ خدمات رقمية بجودة نهتم بيها</div>
-    </div>
-  </div>
-</section>
-
-<section id="social">
-<div class="container">
-  <div class="section-head reveal">
-    <span class="tag">SOCIAL MEDIA</span>
-    <h2>خدمات <span class="gradient">السوشيال ميديا</span></h2>
-    <p>اختار خدمتك واضغط على زر الطلب للتواصل مباشرة.</p>
-  </div>
-
-  <div class="grid">
-
-    <article class="card reveal">
-      <div class="card-icon">🎵</div>
-      <h3>تيك توك TikTok</h3>
-      <p>متابعين وتفاعل ومشاهدات وخدمات اللايف.</p>
-      <div class="price-list">
-        <div class="price-row"><span>1000 متابع مصري</span><span class="price">260 ج.م</span></div>
-        <div class="price-row"><span>تعليق واحد</span><span class="price">35 ج.م</span></div>
-        <div class="price-row"><span>1000 لايك</span><span class="price">55 ج.م</span></div>
-        <div class="price-row"><span>1000 حفظ</span><span class="price">10 ج.م</span></div>
-        <div class="price-row"><span>1000 مشاهدة حقيقية</span><span class="price">9 ج.م</span></div>
-        <div class="price-row"><span>100 نقطة جول للايف</span><span class="price">30 ج.م</span></div>
-        <div class="price-row"><span>100 مشاهد لايف</span><span class="price">45 ج.م</span></div>
-      </div>
-      <button class="order" onclick="order('خدمات تيك توك')">اطلب خدمات تيك توك ↗</button>
-    </article>
-
-    <article class="card reveal">
-      <div class="card-icon">📸</div>
-      <h3>إنستجرام Instagram</h3>
-      <p>خدمات المتابعين والريأكتات.</p>
-      <div class="price-list">
-        <div class="price-row"><span>1000 متابع إنستجرام</span><span class="price">85 ج.م</span></div>
-        <div class="price-row"><span>1000 متابع أجانب</span><span class="price">85 ج.م</span></div>
-        <div class="price-row"><span>1000 رياكت من أي نوع</span><span class="price">45 ج.م</span></div>
-      </div>
-      <button class="order" onclick="order('خدمات إنستجرام')">اطلب خدمات إنستجرام ↗</button>
-    </article>
-
-    <article class="card reveal">
-      <div class="card-icon">📘</div>
-      <h3>فيسبوك Facebook</h3>
-      <p>متابعين أجانب وتعليقات وريأكتات بجميع الأنواع.</p>
-      <div class="price-list">
-        <div class="price-row"><span>70 تعليق فيسبوك مصري</span><span class="price">35 ج.م</span></div>
-        <div class="price-row"><span>1000 متابع فيسبوك أجانب</span><span class="price">85 ج.م</span></div>
-        <div class="price-row"><span>1000 رياكت فيسبوك بجميع الأنواع</span><span class="price">45 ج.م</span></div>
-      </div>
-      <button class="order" onclick="order('خدمات فيسبوك: 70 تعليق مصري بـ35 جنيه، 1000 متابع أجانب بـ85 جنيه، أو 1000 رياكت من جميع الأنواع بـ45 جنيه')">اطلب خدمات فيسبوك ↗</button>
-    </article>
-
-    <article class="card reveal">
-      <div class="card-icon">▶️</div>
-      <h3>يوتيوب YouTube</h3>
-      <p>خدمات للقنوات والفيديوهات وصنّاع المحتوى.</p>
-      <div class="price-list">
-        <div class="price-row"><span>المشاهدات والاشتراكات</span><span class="price">حسب الطلب</span></div>
-        <div class="price-row"><span>اللايكات والتفاعل</span><span class="price">حسب الطلب</span></div>
-      </div>
-      <button class="order" onclick="order('خدمات يوتيوب')">اطلب خدمات يوتيوب ↗</button>
-    </article>
-
-    <article class="card reveal">
-      <div class="card-icon">🌐</div>
-      <h3>منصات أخرى</h3>
-      <p>اسأل عن الخدمات المتاحة للمنصات المختلفة.</p>
-      <div class="price-list">
-        <div class="price-row"><span>الخدمة حسب احتياجك</span><span class="price">حسب الطلب</span></div>
-      </div>
-      <button class="order" onclick="order('خدمات منصات التواصل الأخرى')">استفسر الآن ↗</button>
-    </article>
-
-  </div>
-  <div class="notice">💡 الأسعار بالجنيه المصري. أكد السعر النهائي وتوافر الخدمة ومدة التنفيذ عبر واتساب قبل الدفع. لا تشارك كلمة مرور حسابك مع أي شخص.</div>
+<canvas id="stars"></canvas><div class="aurora"></div>
+<div class="topbar"><div class="container">
+<div class="logo-bar"><b>👑 MARO <span>STORE</span></b><p>واتساب الطلبات: 01030980823 - فودافون كاش</p></div>
+<div class="search-wrap" style="margin-top:10px"><input id="search" placeholder="بحث عن الخدمة..." /><span class="search-icon">🔍</span></div>
+<div class="tabs-wrap" id="filterTabs">
+<button class="chip active" data-filter="all">🗂️ الكل</button>
+<button class="chip" data-filter="instagram">📸 إنستجرام</button>
+<button class="chip" data-filter="tiktok">🎵 تيك توك</button>
+<button class="chip" data-filter="youtube">▶️ يوتيوب</button>
+<button class="chip" data-filter="facebook">👍 فيسبوك</button>
+<button class="chip" data-filter="x">❌ إكس</button>
+<button class="chip" data-filter="snap">👻 سناب</button>
+<button class="chip" data-filter="kwai">🟠 كواي</button>
+<button class="chip" data-filter="whatsapp">🟢 واتساب</button>
+<button class="chip" data-filter="telegram">✈️ تيليجرام</button>
+<button class="chip" data-filter="web">💻 مواقع</button>
 </div>
-</section>
+</div></div>
 
-<section class="games" id="games">
-<div class="container">
-  <div class="section-head reveal">
-    <span class="tag">GAMING ZONE</span>
-    <h2>شحن <span class="gradient">الألعاب</span></h2>
-    <p>اختار لعبتك وابعت تفاصيل الباقة لتأكيد الطلب.</p>
-  </div>
-  <div class="grid">
+<div class="container" style="padding-bottom:90px">
+<div class="main-card">
+<div class="label">الفئة</div>
+<div class="select" id="categorySelect"><span id="categoryText" class="select-text">📸 خدمات جديدة</span><span class="arrow">⌄</span><div class="dropdown" id="categoryDrop"></div></div>
 
-    <article class="card reveal">
-      <div class="card-icon">🔥</div>
-      <h3>Free Fire</h3>
-      <p>شحن جواهر فري فاير عن طريق الـ ID.</p>
-      <div class="price-list">
-        <div class="price-row"><span>100 جوهرة</span><span class="price">50 ج.م</span></div>
-        <div class="price-row"><span>دروب بقيمة 50</span><span class="price">65 ج.م</span></div>
-        <div class="price-row"><span>باقات دروبات أخرى</span><span class="price">تأكيد السعر</span></div>
-      </div>
-      <button class="order" onclick="order('شحن فري فاير - اريد تأكيد سعر الباقة')">اطلب شحن فري فاير ↗</button>
-    </article>
+<div class="label">الخدمة</div>
+<div class="select" id="serviceSelect"><span id="serviceText" class="select-text">🔥 مشاهدات انستجرام [رخيصة]</span><span id="serviceId" class="badge-mini">39</span><span class="arrow">⌄</span><div class="dropdown" id="serviceDrop"></div></div>
 
-    <article class="card reveal">
-      <div class="card-icon">🎮</div>
-      <h3>PUBG Mobile</h3>
-      <p>شحن شدات ببجي واختيار الباقة المناسبة.</p>
-      <div class="price-list">
-        <div class="price-row"><span>باقات الشدات</span><span class="price">حسب الطلب</span></div>
-        <div class="price-row"><span>تحديد الكمية والسعر</span><span class="price">عبر واتساب</span></div>
-      </div>
-      <button class="order" onclick="order('شحن ببجي موبايل - اريد معرفة سعر الباقة')">اطلب شحن ببجي ↗</button>
-    </article>
+<div class="label">الرابط</div>
+<div class="input-wrap"><input id="linkInput" placeholder="https://..." /><div style="display:flex;gap:6px"><button class="icon-btn" onclick="navigator.clipboard.readText().then(t=>document.getElementById('linkInput').value=t)">📋</button><button class="icon-btn">🔖</button></div></div>
 
-    <article class="card reveal">
-      <div class="card-icon">🕹️</div>
-      <h3>ألعاب أخرى</h3>
-      <p>ابعت اسم اللعبة والباقة المطلوبة.</p>
-      <div class="game-price">السعر حسب الطلب</div>
-      <button class="order" onclick="order('شحن ألعاب أخرى')">استفسر عن الشحن ↗</button>
-    </article>
+<div class="label">الكمية</div>
+<div class="input-wrap"><input id="qtyInput" type="number" placeholder="اكتب الكمية..." /></div>
+<div class="hint" id="qtyHint">الحد الأدنى: 100 - الحد الأقصى: 1000000000</div>
 
-  </div>
+<div class="label">⚠️ متوسط الوقت</div>
+<div class="time-box">⏱️ 59 دقائق</div>
+
+<div class="label">التكلفة</div>
+<div class="cost-box" id="costBox">0.00 جنيه</div>
+
+<button class="btn-send" id="sendBtn">إرسال</button>
+
+<div class="perf">
+<div class="perf-head"><b>أداء الخدمة</b><div class="status-pill"><span class="status-dot"></span> قيد المراقبة</div></div>
+<div class="perf-grid">
+<div><small>⚡ السرعة</small><strong class="pink" id="perfSpeed">67.5K/h</strong></div>
+<div><small>⏱️ وقت البدء</small><strong id="perfStart">~ 2 د</strong></div>
+<div><small>📊 الحالة</small><strong>تعمل بشكل طبيعي</strong></div>
 </div>
-</section>
-
-<section id="websites">
-<div class="container">
-  <div class="section-head reveal">
-    <span class="tag">WEB DEVELOPMENT</span>
-    <h2>تصميم مواقع <span class="gradient">احترافية</span></h2>
-    <p>نحوّل فكرتك إلى موقع عصري يناسب الموبايل والكمبيوتر.</p>
-  </div>
-  <div class="grid">
-
-    <article class="card reveal">
-      <div class="card-icon">💻</div>
-      <h3>تصميم مواقع الويب</h3>
-      <p>مواقع شخصية وتجارية وصفحات هبوط وعرض منتجات وخدمات.</p>
-      <div class="game-price">السعر حسب تفاصيل المشروع</div>
-      <button class="order" onclick="order('تصميم موقع ويب جديد')">اطلب تصميم موقع ↗</button>
-    </article>
-
-    <article class="card reveal">
-      <div class="card-icon">🎓</div>
-      <h3>منصات تعليمية</h3>
-      <p>تصميم منصات للمدرسين والكورسات حسب الوظائف المطلوبة.</p>
-      <div class="game-price">السعر حسب الطلب</div>
-      <button class="order" onclick="order('تصميم منصة تعليمية للمدرسين')">اطلب منصة تعليمية ↗</button>
-    </article>
-
-    <article class="card reveal">
-      <div class="card-icon">✨</div>
-      <h3>مشاريع خاصة</h3>
-      <p>عندك فكرة موقع أو منصة؟ ابعت تفاصيلها ونحدد المطلوب.</p>
-      <div class="game-price">عرض سعر مخصص</div>
-      <button class="order" onclick="order('مشروع موقع خاص')">ناقش فكرتك ↗</button>
-    </article>
-
-  </div>
+<div class="perf-note">حُدثت قبل 9 ث • سبق على آخر 16 طلب</div>
 </div>
-</section>
-
-<section id="how">
-<div class="container">
-  <div class="section-head reveal">
-    <h2>إزاي تطلب <span class="gradient">خدمتك؟</span></h2>
-    <p>3 خطوات بسيطة.</p>
-  </div>
-  <div class="grid">
-    <article class="card reveal" style="text-align:center">
-      <div class="card-icon" style="margin:0 auto 15px">1️⃣</div>
-      <h3>اختار الخدمة</h3>
-      <p>حدد المنصة أو المشروع اللي محتاجه.</p>
-    </article>
-    <article class="card reveal" style="text-align:center">
-      <div class="card-icon" style="margin:0 auto 15px">2️⃣</div>
-      <h3>ابعت التفاصيل</h3>
-      <p>اضغط على زر الطلب وهتفتح رسالة واتساب جاهزة.</p>
-    </article>
-    <article class="card reveal" style="text-align:center">
-      <div class="card-icon" style="margin:0 auto 15px">3️⃣</div>
-      <h3>أكد طلبك</h3>
-      <p>اتفق على السعر والمدة وطريقة التنفيذ قبل الدفع.</p>
-    </article>
-  </div>
 </div>
-</section>
 
-<section id="contact">
-<div class="container">
-  <div class="contact-box reveal">
-    <span class="tag">LET'S WORK TOGETHER</span>
-    <h2>جاهز تبدأ مع <span class="gradient">MARO؟</span></h2>
-    <p>للطلبات والاستفسارات تواصل مع مارو مباشرة.</p>
-    <div class="socials">
-      <a class="btn primary" href="https://wa.me/201030980823" target="_blank" rel="noopener">WhatsApp ↗</a>
-      <a class="btn outline" href="https://www.tiktok.com/@marwan_gad7?_r=1&_t=ZS-9AuunMuAJGi" target="_blank" rel="noopener">TikTok ↗</a>
-      <a class="btn outline" href="https://www.facebook.com/share/1D7fr27qDc/" target="_blank" rel="noopener">Facebook ↗</a>
-    </div>
-  </div>
-</section>
-</main>
+<button class="details-toggle">ℹ️ عرض تفاصيل الخدمة ⌄</button>
 
-<a class="floating-wa" href="https://wa.me/201030980823" target="_blank" rel="noopener" aria-label="واتساب">☏</a>
+<div class="main-card" style="margin-top:12px">
+<div class="label">روابط التواصل</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px">
+<a href="https://wa.me/201030980823" style="background:#0e9f58;color:#fff;padding:12px;border-radius:12px;text-align:center;font-weight:900">💬 واتساب</a>
+<a href="https://www.tiktok.com/@marwan_gad7" target="_blank" style="background:#111;color:#fff;padding:12px;border-radius:12px;text-align:center;font-weight:800;border:1px solid #2a2a38">🎵 تيك توك</a>
+<a href="https://www.facebook.com/share/1D7fr27qDc/" target="_blank" style="background:#1877f2;color:#fff;padding:12px;border-radius:12px;text-align:center;font-weight:800">📘 فيسبوك</a>
+<a href="https://wa.me/201030980823?text=عايز%20موقع" style="background:#9c5cff;color:#fff;padding:12px;border-radius:12px;text-align:center;font-weight:800">💻 موقع</a>
+</div>
+</div>
+</div>
 
-<footer>
-  <div class="container">
-    <p>© <span id="year"></span> <b>MARO</b> — جميع الحقوق محفوظة.</p>
-    <p style="margin-top:6px">خدمات رقمية • سوشيال ميديا • تصميم مواقع</p>
-  </div>
-</footer>
+<div class="fab">💬</div>
+<div class="bottom-nav">
+<div class="nav-item active"><i>🛒</i><span>طلب جديد</span></div>
+<div class="nav-item"><i>📦</i><span>الطلبات</span></div>
+<div class="nav-item"><i>💳</i><span>إضافة الأموال</span></div>
+<div class="nav-item"><i>🎧</i><span>تذاكر</span></div>
+</div>
 
 <script>
-const WHATSAPP = "201030980823";
-
-function order(service){
-  const message =
-    "أهلاً مارو 👋\n" +
-    "عايز أطلب: " + service + "\n" +
-    "من فضلك أكدلي السعر النهائي والتفاصيل.";
-  const url = "https://wa.me/" + WHATSAPP +
-    "?text=" + encodeURIComponent(message);
-  window.open(url, "_blank", "noopener");
-}
-
-const menu = document.getElementById("menu");
-const navlinks = document.getElementById("navlinks");
-
-menu.addEventListener("click", function(){
-  navlinks.classList.toggle("open");
-  menu.textContent = navlinks.classList.contains("open") ? "✕" : "☰";
-});
-
-document.querySelectorAll("#navlinks a").forEach(function(link){
-  link.addEventListener("click", function(){
-    navlinks.classList.remove("open");
-    menu.textContent = "☰";
-  });
-});
-
-document.getElementById("year").textContent = new Date().getFullYear();
-
-if("IntersectionObserver" in window){
-  const observer = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        entry.target.classList.add("visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {threshold:0.1});
-
-  document.querySelectorAll(".reveal").forEach(function(el){
-    observer.observe(el);
-  });
-}else{
-  document.querySelectorAll(".reveal").forEach(function(el){
-    el.classList.add("visible");
-  });
-}
+const servicesDB={
+instagram:[{id:39,name:"🔥 مشاهدات انستجرام [رخيصة]",price:0.9,min:100,max:1000000000,speed:"67.5K/h"},{id:40,name:"📸 1000 متابع مصري انستا",price:85,min:100,max:10000,speed:"12K/h"},{id:41,name:"🇸🇦 1000 متابع سعودي انستا",price:95,min:100,max:10000,speed:"10K/h"},{id:42,name:"❤️ 1000 لايك انستا",price:45,min:100,max:50000,speed:"25K/h"},{id:43,name:"💬 1000 تعليق انستا",price:55,min:10,max:5000,speed:"3K/h"},{id:44,name:"👁️ 100 مشاهدة ستوري انستا",price:35,min:100,max:10000,speed:"15K/h"},{id:45,name:"🔖 حفظ ومشاركات انستا",price:1,min:100,max:100000,speed:"20K/h"}],
+tiktok:[{id:101,name:"👥 1000 متابع تيك توك مصري",price:260,min:100,max:10000,speed:"8K/h"},{id:102,name:"❤️ 1000 لايك تيك توك حقيقي",price:70,min:100,max:100000,speed:"30K/h"},{id:103,name:"💬 100 تعليق تيك توك",price:35,min:10,max:1000,speed:"2K/h"},{id:104,name:"🔖 1000 حفظ فيديو تيك توك",price:10,min:100,max:100000,speed:"50K/h"},{id:105,name:"👁️ 1000 مشاهدة حقيقية تيك توك",price:9,min:100,max:10000000,speed:"100K/h"},{id:106,name:"🎁 100 نقطة جوالات لايف",price:30,min:100,max:10000,speed:"1K/h"},{id:107,name:"🔴 100 مشاهد لايف",price:45,min:100,max:5000,speed:"2K/h"},{id:108,name:"🔁 1000 ريبوست تيك توك",price:40,min:100,max:50000,speed:"15K/h"}],
+youtube:[{id:201,name:"👁️ 1000 مشاهدة مصرية يوتيوب",price:65,min:100,max:1000000,speed:"8K/h"},{id:202,name:"🇸🇦 1000 مشاهدة سعودية يوتيوب",price:75,min:100,max:1000000,speed:"7K/h"},{id:203,name:"⏱️ 1000 ساعة مشاهدة",price:180,min:100,max:10000,speed:"1K/h"},{id:204,name:"👥 1000 مشترك يوتيوب",price:600,min:100,max:5000,speed:"500/h"}],
+facebook:[{id:301,name:"👤 1000 متابع حساب فيسبوك",price:85,min:100,max:20000,speed:"9K/h"},{id:302,name:"📄 1000 متابع صفحة فيسبوك",price:85,min:100,max:20000,speed:"9K/h"},{id:303,name:"👍 1000 إعجاب صفحة",price:150,min:100,max:10000,speed:"5K/h"},{id:304,name:"😍 1000 رياكت فيسبوك",price:45,min:100,max:50000,speed:"18K/h"},{id:308,name:"⏱️ 60 ألف دقيقة ربح",price:120,min:60000,max:60000,speed:"500/h"},{id:311,name:"⏱️ 600 ألف دقيقة ربح",price:450,min:600000,max:600000,speed:"500/h"}],
+x:[{id:401,name:"👥 1000 متابع X",price:120,min:100,max:10000,speed:"6K/h"},{id:402,name:"❤️ 1000 لايك X",price:70,min:100,max:50000,speed:"12K/h"},{id:405,name:"🎥 1000 مشاهدة فيديو X",price:20,min:100,max:1000000,speed:"60K/h"}],
+whatsapp:[{id:701,name:"📢 1000 عضو قناة واتساب",price:99,min:100,max:50000,speed:"3K/h"},{id:702,name:"❤️ 1000 رد فعل قناة",price:49,min:100,max:100000,speed:"20K/h"}],
+telegram:[{id:801,name:"👥 1000 عضو عربي تيليجرام",price:70,min:100,max:50000,speed:"6K/h"},{id:804,name:"👁️ 1000 مشاهدة تيليجرام",price:50,min:100,max:1000000,speed:"40K/h"}],
+snap:[{id:501,name:"👻 1000 متابع سناب",price:130,min:100,max:10000,speed:"4K/h"}],
+kwai:[{id:601,name:"👥 2000 متابع كواي",price:120,min:100,max:20000,speed:"5K/h"}],
+web:[{id:901,name:"🌐 تصميم مواقع احترافية",price:0,min:1,max:1,speed:"48h"}]
+};
+let currentCategory="instagram";let currentService=servicesDB["instagram"][0];
+function renderCategories(){const catDrop=document.getElementById('categoryDrop');catDrop.innerHTML='';Object.keys(servicesDB).forEach(cat=>{const div=document.createElement('div');div.className='opt'+(cat===currentCategory?' active':'');const names={instagram:"📸 إنستجرام",tiktok:"🎵 تيك توك",youtube:"▶️ يوتيوب",facebook:"🔵 فيسبوك",x:"❌ إكس",snap:"👻 سناب",kwai:"🟠 كواي",whatsapp:"🟢 واتساب",telegram:"✈️ تيليجرام",web:"💻 مواقع"};div.innerHTML=`<span>${names[cat]||cat}</span><span>›</span>`;div.onclick=()=>{currentCategory=cat;currentService=servicesDB[cat][0];renderAll();catDrop.classList.remove('show');};catDrop.appendChild(div);});}
+function renderServices(filter=""){const drop=document.getElementById('serviceDrop');drop.innerHTML='';servicesDB[currentCategory].forEach(s=>{if(filter && !s.name.includes(filter))return;const div=document.createElement('div');div.className='opt'+(s.id===currentService.id?' active':'');div.innerHTML=`<span>${s.name}</span><span class="badge-mini">${s.id}</span>`;div.onclick=()=>{currentService=s;renderAll();drop.classList.remove('show');};drop.appendChild(div);});}
+function renderAll(){document.getElementById('categoryText').textContent=document.querySelector(`[data-filter="${currentCategory}"]`)?.textContent||currentCategory;document.getElementById('serviceText').textContent=currentService.name;document.getElementById('serviceId').textContent=currentService.id;document.getElementById('qtyHint').textContent=`الحد الأدنى: ${currentService.min} - الحد الأقصى: ${currentService.max}`;document.getElementById('perfSpeed').textContent=currentService.speed;calcCost();renderServices();}
+function calcCost(){const qty=parseInt(document.getElementById('qtyInput').value)||0;let cost=0;if(currentService.price>0 && qty>0){cost=(qty/1000)*currentService.price;if(currentService.min>=60000)cost=currentService.price;}document.getElementById('costBox').textContent=cost===0?(currentService.price===0?"خاص - واتساب":"0.00 جنيه"):cost.toFixed(2)+" جنيه";}
+document.getElementById('categorySelect').addEventListener('click',()=>{document.getElementById('categoryDrop').classList.toggle('show');renderCategories();});
+document.getElementById('serviceSelect').addEventListener('click',()=>{document.getElementById('serviceDrop').classList.toggle('show');});
+document.getElementById('qtyInput').addEventListener('input',calcCost);
+document.getElementById('search').addEventListener('input',e=>{renderServices(e.target.value);if(e.target.value)document.getElementById('serviceDrop').classList.add('show');});
+document.querySelectorAll('.chip').forEach(chip=>{chip.addEventListener('click',()=>{document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));chip.classList.add('active');if(chip.dataset.filter!=="all"){currentCategory=chip.dataset.filter;currentService=servicesDB[currentCategory][0];}renderAll();});});
+document.getElementById('sendBtn').addEventListener('click',()=>{const link=document.getElementById('linkInput').value;const qty=document.getElementById('qtyInput').value;if(!link){alert("حط رابط البوست أولاً!");return;}if(!qty){alert("اكتب الكمية!");return;}const msg=`سلام يا مارو 👑%0Aطلب: ${currentService.name}%0Aالكمية: ${qty}%0Aالرابط: ${link}%0Aالتكلفة: ${document.getElementById('costBox').textContent}`;window.open(`https://wa.me/201030980823?text=${msg}`,'_blank');});
+renderAll();
+const canvas=document.getElementById('stars');const ctx=canvas.getContext('2d');let w,h,stars=[];function resize(){w=canvas.width=innerWidth;h=canvas.height=innerHeight}addEventListener('resize',resize);resize();for(let i=0;i<70;i++)stars.push({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.2,s:Math.random()*0.3+0.1});(function draw(){ctx.clearRect(0,0,w,h);ctx.fillStyle='#fff';stars.forEach(s=>{ctx.globalAlpha=s.s;ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,6.28);ctx.fill();s.y+=s.s*0.2;if(s.y>h){s.y=0;s.x=Math.random()*w}});requestAnimationFrame(draw)})();
 </script>
 </body>
 </html>
